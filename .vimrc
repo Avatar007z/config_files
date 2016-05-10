@@ -58,6 +58,8 @@ set backspace=indent,eol,start " powerful backspaces
 set completeopt=longest,menu,preview " completion options
 set display=uhex " include "uhex" to show unprintable characters as a hex number
 
+color evening
+
 
 
 " Vundle specific:
