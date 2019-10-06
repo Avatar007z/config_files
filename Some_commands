@@ -1,0 +1,6 @@
+# generate folder names and create those folders
+for i in `ls 201* | awk -F_ '{print $1}' | uniq | grep -v ":"` ; do mkdir $i ; done
+
+# move mp3 files from current folder to their corresponding subfolder
+for j in $(for i in `ls 2018* | awk -F_ '{print $1}' | grep -v ":" | uniq` ; do echo  $i ; done) ; do mv $j*.mp3 $j/ ; done
+for j in $(for i in `ls 2019* | awk -F_ '{print $1}' | grep -v ":" | uniq` ; do echo  $i ; done) ; do mv $j*.mp3 $j/ ; done
