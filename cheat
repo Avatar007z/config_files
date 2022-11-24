@@ -1,0 +1,12 @@
+#!/bin/bash
+
+args=""
+lang=$1
+
+for i in ${@:2}
+do
+ if [ -z $args ] ; then args=$i ; else args=$args"+"$i ; fi
+done
+
+echo Executing: curl cht.sh/$lang/$args
+curl cht.sh/$lang/$args
